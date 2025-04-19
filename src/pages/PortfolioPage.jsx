@@ -67,7 +67,7 @@ function PortfolioPage() {
 
         {data.sections?.length > 0 && (
           <section>
-            <h3>Custom Sections</h3>
+            
             {data.sections.map((section, idx) => (
               <div key={idx} style={{ marginBottom: "2rem" }}>
                 <h4>{section.title}</h4>
