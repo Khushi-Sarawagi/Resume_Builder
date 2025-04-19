@@ -21,7 +21,7 @@ function PreviewPage() {
 
       {data.sections?.length > 0 && (
         <>
-          <h3 style={{ marginTop: "2rem" }}>Custom Sections</h3>
+        
           {data.sections.map((section, idx) => (
             <div key={idx} style={{ marginBottom: "2rem", borderTop: "1px solid #444", paddingTop: "1rem" }}>
               <h4>{section.title}</h4>

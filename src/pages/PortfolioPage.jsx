@@ -4,7 +4,7 @@ import html2pdf from "html2pdf.js";
 
 function PortfolioPage() {
   const [data, setData] = useState(null);
-  const pdfRef = useRef(); // to reference the portfolio content
+  const pdfRef = useRef();
 
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem("portfolioData"));
@@ -37,35 +37,21 @@ function PortfolioPage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <motion.section
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
+        <section style={{ marginBottom: "2rem" }}>
           <h2>{data.name}</h2>
           <p>{data.bio}</p>
-        </motion.section>
+        </section>
 
-        <motion.section
-          style={{ marginTop: "2rem" }}
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
+        <section style={{ marginBottom: "2rem" }}>
           <h3>Skills</h3>
           <ul>
             {data.skills
               ?.split(",")
               .map((skill, index) => <li key={index}>{skill.trim()}</li>)}
           </ul>
-        </motion.section>
+        </section>
 
-        <motion.section
-          style={{ marginTop: "2rem" }}
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.6 }}
-        >
+        <section style={{ marginBottom: "2rem" }}>
           <h3>Social Links</h3>
           {data.github && (
             <p>
@@ -77,7 +63,26 @@ function PortfolioPage() {
               LinkedIn: <a href={data.linkedin}>{data.linkedin}</a>
             </p>
           )}
-        </motion.section>
+        </section>
+
+        {data.sections?.length > 0 && (
+          <section>
+            <h3>Custom Sections</h3>
+            {data.sections.map((section, idx) => (
+              <div key={idx} style={{ marginBottom: "2rem" }}>
+                <h4>{section.title}</h4>
+                <p>{section.content}</p>
+                {section.image && (
+                  <img
+                    src={section.image}
+                    alt={`Section ${idx + 1}`}
+                    style={{ width: "100%", maxHeight: "300px", objectFit: "cover", borderRadius: "8px" }}
+                  />
+                )}
+              </div>
+            ))}
+          </section>
+        )}
       </motion.div>
     </div>
   );
