@@ -1,0 +1,14 @@
+.formhead{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+
+}
+
+label{
+    padding: 10px;
+}
+
+.inside{
+    margin: 10px;
+}

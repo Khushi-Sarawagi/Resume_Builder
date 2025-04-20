@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./FormPage.css"
 
 function FormPage() {
   const [formData, setFormData] = useState({
@@ -40,12 +41,12 @@ function FormPage() {
 
   return (
     <div style={{ padding: "1rem" }}>
-      <h2>Build Your Portfolio</h2>
+      <h2 className="formhead">Build Your Resume</h2>
       <div className="divider divider-error"></div>
       <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input className="input input-primary" name="name" value={formData.name} onChange={handleChange} required />
+          <input className="input inside input-primary" name="name" value={formData.name} onChange={handleChange} required />
         </label>
         <br /><br />
         <div className="divider divider-warning"></div>
@@ -53,7 +54,7 @@ function FormPage() {
 
         <label>
           Bio:
-          <textarea className="textarea textarea-primary" name="bio" value={formData.bio} onChange={handleChange} required />
+          <textarea className="textarea inside textarea-primary" name="bio" value={formData.bio} onChange={handleChange} required />
         </label>
         <br /><br />
         <div className="divider divider-warning"></div>
@@ -61,7 +62,7 @@ function FormPage() {
 
         <label>
           Skills (comma separated):
-          <textarea type="text" name="skills" className="textarea textarea-primary" value={formData.skills} onChange={handleChange} />
+          <textarea type="text" name="skills" className="textarea inside textarea-primary" value={formData.skills} onChange={handleChange} />
         </label>
         <br /><br />
         <div className="divider divider-warning"></div>
@@ -70,7 +71,7 @@ function FormPage() {
 
         <label>
           GitHub URL:
-          <input name="github" value={formData.github} type="url" className="input validator" required placeholder="https://" pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9-].*[a-zA-Z0-9])?.)+[a-zA-Z].*$" 
+          <input name="github" value={formData.github} type="url" className="input inside validator" required placeholder="https://" pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9-].*[a-zA-Z0-9])?.)+[a-zA-Z].*$" 
   title="Must be valid URL" onChange={handleChange} />
   <p className="validator-hint">Must be a valid URL</p>
         </label>
@@ -82,7 +83,7 @@ function FormPage() {
 
         <label>
           LinkedIn URL:
-          <input name="linkedin" value={formData.linkedin} type="url" className="input validator" required placeholder="https://" pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9-].*[a-zA-Z0-9])?.)+[a-zA-Z].*$" 
+          <input name="linkedin" value={formData.linkedin} type="url" className="input inside validator" required placeholder="https://" pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9-].*[a-zA-Z0-9])?.)+[a-zA-Z].*$" 
   title="Must be valid URL" onChange={handleChange} />
   <p className="validator-hint">Must be valid URL</p>
         </label>
@@ -97,7 +98,7 @@ function FormPage() {
               Section Title:
               <input
                 type="text"
-                className="input input-primary"
+                className="input inside input-primary"
                 value={section.title}
                 onChange={(e) => handleSectionChange(index, "title", e.target.value)}
               />
@@ -105,7 +106,7 @@ function FormPage() {
             <br />
             <label>
               Content:
-              <textarea className="textarea textarea-primary"
+              <textarea className="textarea inside textarea-primary"
                 value={section.content}
                 onChange={(e) => handleSectionChange(index, "content", e.target.value)}
               />
@@ -113,13 +114,13 @@ function FormPage() {
             <br />
             <div className="divider divider-warning"></div>
 
-            <button type="button" onClick={() => removeSection(index)}>Remove Section</button>
+            <button type="button" className="btn btn-error" onClick={() => removeSection(index)}>Remove Section</button>
           </div>
         ))}
 
-        <button type="button" onClick={addSection}>+ Add Section</button>
+        <button type="button" className="btn btn-secondary" onClick={addSection}>+ Add Section</button>
         <br /><br />
-        <button type="submit">Save</button>
+        <button className="btn btn-success">Save</button>
       </form>
     </div>
   );
