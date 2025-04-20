@@ -81,7 +81,7 @@ src/
 │   ├── FormPage.jsx
 │   ├── PreviewPage.jsx
 │   └── PortfolioPage.jsx
-|   ├── Home.css
+│   ├── Home.css
 │   ├── FormPage.css
 │   ├── PreviewPage.css
 ├── App.jsx
