@@ -27,13 +27,7 @@ function PreviewPage() {
             <div key={idx} style={{ marginBottom: "2rem", borderTop: "1px solid #444", paddingTop: "1rem" }}>
               <h4><strong>{section.title}</strong></h4>
               <p>{section.content}</p>
-              {section.image && (
-                <img
-                  src={section.image}
-                  alt={`Section ${idx + 1}`}
-                  style={{ width: "100%", maxHeight: "300px", objectFit: "cover", borderRadius: "8px" }}
-                />
-              )}
+             
             </div>
           ))}
         </>

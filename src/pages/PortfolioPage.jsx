@@ -27,7 +27,7 @@ function PortfolioPage() {
 
   return (
     <div style={{ padding: "2rem", maxWidth: "700px", margin: "0 auto" }}>
-      <button onClick={handleDownloadPDF} style={{ float: "right", marginBottom: "1rem" }}>
+      <button className="btn btn-outline btn-warning" onClick={handleDownloadPDF} style={{ float: "right", marginBottom: "1rem" }}>
         📄 Download PDF
       </button>
 
@@ -37,13 +37,13 @@ function PortfolioPage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <section style={{ marginBottom: "2rem" }}>
-          <h2>{data.name}</h2>
+        <section style={{ marginBottom: "2rem" , display:"flex", flexDirection:"column", alignItems:"center"}}>
+          <h2 style={{color:"black", fontSize:"30px"}}><strong>{data.name}</strong></h2>
           <p>{data.bio}</p>
         </section>
 
         <section style={{ marginBottom: "2rem" }}>
-          <h3>Skills</h3>
+          <h3 style={{color:"black"}}><strong>Skills</strong></h3>
           <ul>
             {data.skills
               ?.split(",")
@@ -52,7 +52,7 @@ function PortfolioPage() {
         </section>
 
         <section style={{ marginBottom: "2rem" }}>
-          <h3>Social Links</h3>
+        <h3 style={{color:"black"}}><strong>Social Links</strong></h3>
           {data.github && (
             <p>
               GitHub: <a href={data.github}>{data.github}</a>
@@ -70,20 +70,16 @@ function PortfolioPage() {
             
             {data.sections.map((section, idx) => (
               <div key={idx} style={{ marginBottom: "2rem" }}>
-                <h4>{section.title}</h4>
+                <h4><strong>{section.title}</strong></h4>
                 <p>{section.content}</p>
-                {section.image && (
-                  <img
-                    src={section.image}
-                    alt={`Section ${idx + 1}`}
-                    style={{ width: "100%", maxHeight: "300px", objectFit: "cover", borderRadius: "8px" }}
-                  />
-                )}
+               
               </div>
             ))}
           </section>
         )}
       </motion.div>
+
+      <p style={{display:"flex", justifyContent:"center", fontSize:"20px", marginTop:"50px", color:"red"}}>Please download in the LIGHT mode!</p>
     </div>
   );
 }
