@@ -1,3 +1,128 @@
+# 🧑‍💼 Resume Builder
+
+A dynamic, responsive **Resume Builder** built with React + Vite that allows users to input their personal and professional details, preview their resume in real-time, add custom sections, and download the final output as a polished **PDF**.
+
+---
+
+## 🚀 Features
+
+- ⚡ Built with React + Vite
+- 🌙 Dark Mode Support
+- ✍️ Form to input:
+  - Name
+  - Bio
+  - Skills
+  - Social links (GitHub, LinkedIn)
+  - Unlimited custom sections (with title and content)
+- 👀 Live Resume Preview
+- 📄 Download as PDF using `html2pdf.js`
+- 🎨 Smooth Animations using `framer-motion`
+- 🔁 LocalStorage Persistence
+- 🧱 Fully modular, responsive layout
+
+---
+
+## 🧑‍💻 Tech Stack
+
+- **Frontend**: React, Vite
+- **Styling**: CSS (with variables for dark mode)
+- **Animation**: Framer Motion
+- **PDF Export**: html2pdf.js
+- **Routing**: React Router
+
+---
+
+## 🛠️ Setup Instructions
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/your-username/resume-builder.git
+cd resume-builder
+
+```
+
+2.	Install dependencies
+
+```bash
+npm install
+```
+
+3.	Run the development server
+
+```bash
+npm run dev
+```
+4.	Build for production
+
+```bash
+npm run build
+
+```
+
+
+## 📸 Screenshots
+
+
+
+
+---
+
+
+## 📁 Folder Structure (simplified)
+
+
+
+``` bash
+
+src/
+├── pages/
+│   ├── Home.jsx
+│   ├── FormPage.jsx
+│   ├── PreviewPage.jsx
+│   └── PortfolioPage.jsx
+├── App.jsx
+├── main.jsx
+└── App.css
+
+
+```
+
+---
+
+
+## 🙌 Acknowledgements
+
+
+Built with ❤️ by Khushi Sarawagi as part of the end-term project.
+Thanks to mentors and peers who supported and inspired this journey!
+
+
+---
+
+
+## 📬 Contact
+
+
+Feel free to connect with me on:
+  -	GitHub: https://github.com/Khushi-Sarawagi
+  -	LinkedIn: www.linkedin.com/in/khushi-sarawagi
+
+
+ ---
+
+ 
+## 📜 License
+
+
+This project is open-source and free to use!
+
+
+---
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
