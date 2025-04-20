@@ -1,0 +1,8 @@
+.previewhead{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--oppo);
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 9px rgb(234, 182, 182);
+}

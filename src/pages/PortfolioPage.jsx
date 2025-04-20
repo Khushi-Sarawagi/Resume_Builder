@@ -23,7 +23,7 @@ function PortfolioPage() {
     html2pdf().set(opt).from(pdfRef.current).save();
   };
 
-  if (!data) return <p>No portfolio data found. Please fill out the form first.</p>;
+  if (!data) return <p style={{padding:"20px"}}>No portfolio data found. Please fill out the form first.</p>;
 
   return (
     <div style={{ padding: "2rem", maxWidth: "700px", margin: "0 auto" }}>

@@ -36,7 +36,7 @@ function FormPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem("portfolioData", JSON.stringify(formData));
-    alert("Form data saved! You can now preview your portfolio.");
+    alert("Form data saved! You can now preview your Resume.");
   };
 
   return (

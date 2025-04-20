@@ -9,7 +9,7 @@ import PortfolioPage from "./pages/PortfolioPage";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
+    localStorage.getItem("theme") === "light"
   );
 
 // this code checks the local storage for theme preference
@@ -17,9 +17,9 @@ function App() {
   useEffect(() => {
     document.documentElement.setAttribute(
       "data-theme",
-      darkMode ? "dark" : "light"
+      darkMode ? "light" : "dark"
     );
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
+    localStorage.setItem("theme", darkMode ? "light" : "dark");
   }, [darkMode]);
 
   return (
@@ -29,7 +29,7 @@ function App() {
         <header>
         <h1 className="text-3xl font-bold">Resume Builder</h1>
           <button className="btn btn-outline btn-accent btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl" onClick={() => setDarkMode(!darkMode)}>
-            Toggle {darkMode ? "Light" : "Dark"} Mode
+            Toggle {darkMode ? "Dark" : "Light"} Mode
           </button>
         </header>
 

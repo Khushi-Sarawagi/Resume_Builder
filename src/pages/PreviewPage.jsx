@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./PreviewPage.css"; 
 
 function PreviewPage() {
   const [data, setData] = useState(null);
@@ -8,23 +9,23 @@ function PreviewPage() {
     if (savedData) setData(savedData);
   }, []);
 
-  if (!data) return <p>No data found. Please fill out the form first.</p>;
+  if (!data) return <p style={{padding:"20px"}}>No data found. Please fill out the form first.</p>;
 
   return (
     <div style={{ padding: "2rem", maxWidth: "700px", margin: "0 auto" }}>
-      <h2>Preview</h2>
-      <p><strong>Name:</strong> {data.name}</p>
-      <p><strong>Bio:</strong> {data.bio}</p>
-      <p><strong>Skills:</strong> {data.skills}</p>
-      <p><strong>GitHub:</strong> <a href={data.github}>{data.github}</a></p>
-      <p><strong>LinkedIn:</strong> <a href={data.linkedin}>{data.linkedin}</a></p>
+      <h2 className="previewhead">Preview</h2>
+      <p><strong style={{marginRight:"1px"}}>Name:</strong> {data.name}</p>
+      <p><strong style={{marginRight:"1px"}}>Bio:</strong> {data.bio}</p>
+      <p><strong style={{marginRight:"1px"}}>Skills:</strong> {data.skills}</p>
+      <p><strong style={{marginRight:"1px"}}>GitHub:</strong> <a href={data.github}>{data.github}</a></p>
+      <p><strong style={{marginRight:"1px"}}>LinkedIn:</strong> <a href={data.linkedin}>{data.linkedin}</a></p>
 
       {data.sections?.length > 0 && (
         <>
         
           {data.sections.map((section, idx) => (
             <div key={idx} style={{ marginBottom: "2rem", borderTop: "1px solid #444", paddingTop: "1rem" }}>
-              <h4>{section.title}</h4>
+              <h4><strong>{section.title}</strong></h4>
               <p>{section.content}</p>
               {section.image && (
                 <img
