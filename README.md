@@ -64,13 +64,26 @@ npm run build
 ## 📸 Screenshots
 
 
+<img width="1470" alt="Screenshot 2025-04-20 at 5 27 00 PM" src="https://github.com/user-attachments/assets/5e630529-6bd3-4f38-ab55-89d92d4e54fa" />
+
+
+
+<img width="1470" alt="Screenshot 2025-04-20 at 5 28 16 PM" src="https://github.com/user-attachments/assets/8c908128-f561-4eeb-8762-63d71d805187" />
+
+
+
+<img width="1466" alt="Screenshot 2025-04-20 at 5 21 29 PM" src="https://github.com/user-attachments/assets/81703bae-d229-4ded-9a9c-41a177cd0fc7" />
+
+
+<img width="1470" alt="Screenshot 2025-04-20 at 5 20 32 PM" src="https://github.com/user-attachments/assets/06c37ca0-6212-487b-a019-da14c4646332" />
+
+
 
 
 ---
 
 
 ## 📁 Folder Structure (simplified)
-
 
 
 ``` bash
