@@ -16,7 +16,7 @@ A dynamic, responsive **Resume Builder** built with React + Vite that allows use
   - Unlimited custom sections (with title and content)
 - 👀 Live Resume Preview
 - 📄 Download as PDF using `html2pdf.js`
-- 🎨 Smooth Animations using `framer-motion`
+- 🎨 Smooth Animations using `daisyui`
 - 🔁 LocalStorage Persistence
 - 🧱 Fully modular, responsive layout
 
@@ -25,8 +25,8 @@ A dynamic, responsive **Resume Builder** built with React + Vite that allows use
 ## 🧑‍💻 Tech Stack
 
 - **Frontend**: React, Vite
-- **Styling**: CSS (with variables for dark mode)
-- **Animation**: Framer Motion
+- **Styling**: CSS (with variables for dark mode),DaisyUI
+- **Animation**: DaisyUI, CSS using keyframes
 - **PDF Export**: html2pdf.js
 - **Routing**: React Router
 
@@ -81,6 +81,9 @@ src/
 │   ├── FormPage.jsx
 │   ├── PreviewPage.jsx
 │   └── PortfolioPage.jsx
+|   ├── Home.css
+│   ├── FormPage.css
+│   ├── PreviewPage.css
 ├── App.jsx
 ├── main.jsx
 └── App.css
