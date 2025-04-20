@@ -12,6 +12,8 @@ function App() {
     localStorage.getItem("theme") === "dark"
   );
 
+// this code checks the local storage for theme preference
+
   useEffect(() => {
     document.documentElement.setAttribute(
       "data-theme",
@@ -21,20 +23,21 @@ function App() {
   }, [darkMode]);
 
   return (
-    <Router>
+    // this code sets the theme to dark or light based on the user preference 
+    <Router> 
       <div className="app">
         <header>
-          <h1>Portfolio Builder</h1>
-          <button onClick={() => setDarkMode(!darkMode)}>
+        <h1 className="text-3xl font-bold">Resume Builder</h1>
+          <button className="btn btn-outline btn-accent btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl" onClick={() => setDarkMode(!darkMode)}>
             Toggle {darkMode ? "Light" : "Dark"} Mode
           </button>
         </header>
 
         {/* Simple Navigation */}
         <nav>
-          <Link to="/">Home</Link> |{" "}
-          <Link to="/form">Form</Link> |{" "}
-          <Link to="/preview">Preview</Link> |{" "}
+          <Link to="/">Home</Link>
+          <Link to="/form">Form</Link>
+          <Link to="/preview">Preview</Link>
           <Link to="/portfolio">Portfolio</Link>
         </nav>
 

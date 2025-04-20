@@ -1,17 +1,28 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
 :root {
   --bg-color: #121212;
   --text-color: #ffffff;
   --accent: #00bcd4;
+  --transi: rgb(94, 36, 65);
+  --oppo: #FCB700;
+
 }
 
 [data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #111111;
   --accent: #007bff;
+  --transi:rgb(227, 129, 178);
+  --oppo : #ff5500;
 }
 
 body {
   margin: 0;
+  padding: 10px;
   font-family: "Segoe UI", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -28,18 +39,49 @@ a:hover {
 }
 
 button {
-  padding: 0.5rem 1rem;
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 4px;
+ 
   cursor: pointer;
 }
 
-button:hover {
-  opacity: 0.9;
+header {
+  position : relative;
+  display : flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-bottom: 20px;
 }
+
+h1 {
+  font-size: 3rem;
+  
+}
+
 
 h1, h2, h3 {
   color: var(--accent);
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 2rem;
+  border: #F42F98 3px solid;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 9px cyan;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+  background-color:var(--transi);
+  transition: background-color 0.3s, color 0.3s;
+  transform: translateZ(10px) scale(1.03); /* Slightly scale and move forward */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add depth */
+
+}
+
+

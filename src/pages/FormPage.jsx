@@ -41,36 +41,54 @@ function FormPage() {
   return (
     <div style={{ padding: "1rem" }}>
       <h2>Build Your Portfolio</h2>
+      <div className="divider divider-error"></div>
       <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input name="name" value={formData.name} onChange={handleChange} required />
+          <input className="input input-primary" name="name" value={formData.name} onChange={handleChange} required />
         </label>
         <br /><br />
+        <div className="divider divider-warning"></div>
+
 
         <label>
           Bio:
-          <textarea name="bio" value={formData.bio} onChange={handleChange} required />
+          <textarea className="textarea textarea-primary" name="bio" value={formData.bio} onChange={handleChange} required />
         </label>
         <br /><br />
+        <div className="divider divider-warning"></div>
+
 
         <label>
           Skills (comma separated):
-          <input name="skills" value={formData.skills} onChange={handleChange} />
+          <textarea type="text" name="skills" className="textarea textarea-primary" value={formData.skills} onChange={handleChange} />
         </label>
         <br /><br />
+        <div className="divider divider-warning"></div>
+
+
 
         <label>
           GitHub URL:
-          <input name="github" value={formData.github} onChange={handleChange} />
+          <input name="github" value={formData.github} type="url" className="input validator" required placeholder="https://" pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9-].*[a-zA-Z0-9])?.)+[a-zA-Z].*$" 
+  title="Must be valid URL" onChange={handleChange} />
+  <p className="validator-hint">Must be a valid URL</p>
         </label>
         <br /><br />
+        <div className="divider divider-warning"></div>
+
+
+
 
         <label>
           LinkedIn URL:
-          <input name="linkedin" value={formData.linkedin} onChange={handleChange} />
+          <input name="linkedin" value={formData.linkedin} type="url" className="input validator" required placeholder="https://" pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9-].*[a-zA-Z0-9])?.)+[a-zA-Z].*$" 
+  title="Must be valid URL" onChange={handleChange} />
+  <p className="validator-hint">Must be valid URL</p>
         </label>
         <br /><br />
+
+        <div className="divider divider-warning"></div>
 
         <h3>Custom Sections</h3>
         {formData.sections.map((section, index) => (
@@ -79,6 +97,7 @@ function FormPage() {
               Section Title:
               <input
                 type="text"
+                className="input input-primary"
                 value={section.title}
                 onChange={(e) => handleSectionChange(index, "title", e.target.value)}
               />
@@ -86,21 +105,14 @@ function FormPage() {
             <br />
             <label>
               Content:
-              <textarea
+              <textarea className="textarea textarea-primary"
                 value={section.content}
                 onChange={(e) => handleSectionChange(index, "content", e.target.value)}
               />
             </label>
             <br />
-            <label>
-              Image URL:
-              <input
-                type="text"
-                value={section.image}
-                onChange={(e) => handleSectionChange(index, "image", e.target.value)}
-              />
-            </label>
-            <br />
+            <div className="divider divider-warning"></div>
+
             <button type="button" onClick={() => removeSection(index)}>Remove Section</button>
           </div>
         ))}
